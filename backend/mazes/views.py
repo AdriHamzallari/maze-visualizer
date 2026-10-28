@@ -7,7 +7,7 @@ import json
 # Create your views here.
 
 
-def health(requests):
+def health(request):
     data = {
         'status': "OK"
     }
@@ -58,4 +58,4 @@ def generate_maze(request):
             "grid": grid,
         })
     except json.JSONDecodeError:
-        return JsonResponse({"details": "JSON is malformed"}, status=400)
+        return JsonResponse({"detail": "JSON is malformed"}, status=400)
