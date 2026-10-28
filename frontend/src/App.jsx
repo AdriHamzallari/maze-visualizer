@@ -120,7 +120,7 @@ function App() {
       if (err instanceof TypeError) {
         setApiStatus("offline");
         setError(
-          `Cannot reach ${API_BASE}. Start FastAPI and check its CORS configuration.`
+          `Cannot reach ${API_BASE}. Start Django and check its CORS configuration.`
         );
       } else {
         setError(err.message || "Maze generation failed.");
@@ -236,7 +236,7 @@ function App() {
 
         <footer className="page-footer">
           <span>MAZE LAB</span>
-          <span>React frontend · FastAPI backend</span>
+          <span>React frontend · Django backend</span>
         </footer>
       </main>
     </div>

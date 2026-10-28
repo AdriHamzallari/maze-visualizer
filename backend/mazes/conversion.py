@@ -21,14 +21,3 @@ def maze_to_grid(maze):
         if not cell.walls["E"]:
             grid[2 * x + 1][2 * y + 2] = 0
     return grid
-
-
-maze = GenerateMaze(2, 2, seed=12)
-
-maze.save_nghb()
-
-start = maze.get_cell(0, 0)
-maze.dfs(start)
-maze.save_walls()
-
-print(maze_to_grid(maze))

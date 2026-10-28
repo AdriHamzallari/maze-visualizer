@@ -14,7 +14,6 @@ class MazeAPITestCase(TestCase):
             data=json.dumps(payload),
             content_type="application/json"
         )
-        print(response.json())
         self.assertEqual(response.status_code, 200)
         response_data = response.json()
         self.assertIn("grid", response_data)
